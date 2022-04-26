@@ -16,5 +16,10 @@ namespace TrabajoPracticoPAV1_G02.ABMs.Productos
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

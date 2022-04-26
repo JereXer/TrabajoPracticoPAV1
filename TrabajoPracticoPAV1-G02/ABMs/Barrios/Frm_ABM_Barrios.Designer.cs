@@ -151,6 +151,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.btnEditar.Size = new System.Drawing.Size(45, 43);
             this.btnEditar.TabIndex = 18;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // grBoxFiltros
             // 
@@ -166,6 +167,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.grBoxFiltros.TabIndex = 17;
             this.grBoxFiltros.TabStop = false;
             this.grBoxFiltros.Text = "Filtros";
+            this.grBoxFiltros.Enter += new System.EventHandler(this.grBoxFiltros_Enter);
             // 
             // Frm_ABM_Barrios
             // 

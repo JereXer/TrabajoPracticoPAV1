@@ -82,6 +82,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.btnEditar.Size = new System.Drawing.Size(45, 43);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -92,6 +93,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.btnAgregar.Size = new System.Drawing.Size(44, 43);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // grBoxFiltros
             // 

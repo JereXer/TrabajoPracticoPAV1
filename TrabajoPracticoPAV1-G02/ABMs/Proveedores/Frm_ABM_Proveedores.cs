@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPracticoPAV1_G02.ABMs.Proveedores;
 
 namespace TrabajoPracticoPAV1_G02.ABMs
 {
@@ -37,6 +38,18 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             Hide();
             Frm_PaginaPrincipal formPaginaPrincipal = new Frm_PaginaPrincipal();
             formPaginaPrincipal.Show();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Frm_AltaProveedores formAltaProveedores = new Frm_AltaProveedores();
+            formAltaProveedores.Show();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Frm_ModificarProveedor formModificarProveedor = new Frm_ModificarProveedor();
+            formModificarProveedor.Show();
         }
     }
 }

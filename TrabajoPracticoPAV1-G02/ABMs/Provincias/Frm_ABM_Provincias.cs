@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPracticoPAV1_G02.ABMs.Provincias;
 
 namespace TrabajoPracticoPAV1_G02.ABMs
 {
@@ -22,6 +23,18 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             Hide();
             Frm_PaginaPrincipal formPaginaPrincipal = new Frm_PaginaPrincipal();
             formPaginaPrincipal.Show();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Frm_AltaProvincias formAltaProvincias = new Frm_AltaProvincias();
+            formAltaProvincias.Show();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Frm_ModificarProvincia formModificarProvincias = new Frm_ModificarProvincia();
+            formModificarProvincias.Show();
         }
     }
 }

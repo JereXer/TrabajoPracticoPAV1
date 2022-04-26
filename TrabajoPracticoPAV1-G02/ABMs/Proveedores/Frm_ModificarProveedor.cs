@@ -21,5 +21,10 @@ namespace TrabajoPracticoPAV1_G02.ABMs.Proveedores
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

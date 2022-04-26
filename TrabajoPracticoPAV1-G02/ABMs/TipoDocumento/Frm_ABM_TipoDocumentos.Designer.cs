@@ -134,6 +134,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.btnAgregar.Size = new System.Drawing.Size(44, 43);
             this.btnAgregar.TabIndex = 21;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // button1
             // 
@@ -165,6 +166,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.btnEditar.Size = new System.Drawing.Size(45, 43);
             this.btnEditar.TabIndex = 23;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // Frm_ABM_TipoDocumentos
             // 
