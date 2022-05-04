@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPracticoPAV1_G02.ABMs.Barrios;
+using TrabajoPracticoPAV1_G02.Negocio;
 
 namespace TrabajoPracticoPAV1_G02.ABMs
 {
@@ -38,6 +39,25 @@ namespace TrabajoPracticoPAV1_G02.ABMs
         }
 
         private void grBoxFiltros_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (chkBoxTodos.Checked == true)
+            {
+                Ne_Barrios barrios = new Ne_Barrios();
+                this.dataGridViewBarrios.DataSource = barrios.RecuperaBarrios();
+            }
+        }
+
+        private void dataGridViewBarrios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void chkBoxTodos_CheckedChanged(object sender, EventArgs e)
         {
 
         }
