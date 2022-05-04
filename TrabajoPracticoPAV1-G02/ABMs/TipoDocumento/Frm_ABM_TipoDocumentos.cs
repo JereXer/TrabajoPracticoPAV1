@@ -44,5 +44,15 @@ namespace TrabajoPracticoPAV1_G02.ABMs
                 //Acá tiene que cargar los datos y buscar los tipos documentos
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
