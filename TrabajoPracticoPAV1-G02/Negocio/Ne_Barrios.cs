@@ -16,5 +16,10 @@ namespace TrabajoPracticoPAV1_G02.Negocio
             string sql = @"SELECT * FROM [BD3K6G02_2022].[dbo].[Barrio]";
             return _BD_barrios.EjecutarSQL(sql);
         }
+        public DataTable RecuperaBarrios(string nombre)
+        {
+            string sql = @"SELECT * FROM [BD3K6G02_2022].[dbo].[Barrio] WHERE nombre = '" + nombre + "'";
+            return _BD_barrios.EjecutarSQL(sql);
+        }
     }
 }

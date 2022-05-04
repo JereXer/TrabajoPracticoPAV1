@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPracticoPAV1_G02.ABMs.Provincias;
+using TrabajoPracticoPAV1_G02.Negocio;
 
 namespace TrabajoPracticoPAV1_G02.ABMs
 {
@@ -35,6 +36,36 @@ namespace TrabajoPracticoPAV1_G02.ABMs
         {
             Frm_ModificarProvincia formModificarProvincias = new Frm_ModificarProvincia();
             formModificarProvincias.Show();
+        }
+
+        private void dataGridViewProvincia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Ne_Provincias provincias = new Ne_Provincias();
+            this.dataGridViewProvincias.DataSource = null;
+            if (chkBoxTodos.Checked == true)
+            {
+                this.dataGridViewProvincias.DataSource = provincias.RecuperarProvincias();
+            }
+            else // busca por campo de busqueda si no esta tildado el [X]Todos
+            {
+                if (txtBoxNombre.Text != string.Empty)
+                {
+                    this.dataGridViewProvincias.DataSource = provincias.RecuperarProvincias(txtBoxNombre.Text);
+                    if (dataGridViewProvincias.Rows.Count == 1)
+                    {
+                        MessageBox.Show("No se encontró ningun Barrio", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese nombre a buscar.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
     }
 }

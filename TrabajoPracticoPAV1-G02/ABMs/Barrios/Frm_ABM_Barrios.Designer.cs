@@ -41,7 +41,6 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.btnEditar = new System.Windows.Forms.Button();
             this.grBoxFiltros = new System.Windows.Forms.GroupBox();
             this.dataGridViewBarrios = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grBoxFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarrios)).BeginInit();
             this.SuspendLayout();
@@ -160,20 +159,12 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.dataGridViewBarrios.AllowDrop = true;
             this.dataGridViewBarrios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridViewBarrios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBarrios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             this.dataGridViewBarrios.Location = new System.Drawing.Point(10, 173);
             this.dataGridViewBarrios.Name = "dataGridViewBarrios";
             this.dataGridViewBarrios.RowTemplate.Height = 25;
             this.dataGridViewBarrios.Size = new System.Drawing.Size(587, 219);
             this.dataGridViewBarrios.TabIndex = 14;
             this.dataGridViewBarrios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBarrios_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 81;
             // 
             // Frm_ABM_Barrios
             // 
@@ -207,6 +198,5 @@ namespace TrabajoPracticoPAV1_G02.ABMs
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.GroupBox grBoxFiltros;
         private System.Windows.Forms.DataGridView dataGridViewBarrios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

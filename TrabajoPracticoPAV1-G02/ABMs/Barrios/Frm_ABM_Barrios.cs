@@ -43,15 +43,31 @@ namespace TrabajoPracticoPAV1_G02.ABMs
 
         }
 
+       
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            Ne_Barrios barrios = new Ne_Barrios();
+            this.dataGridViewBarrios.DataSource = null;
             if (chkBoxTodos.Checked == true)
             {
-                Ne_Barrios barrios = new Ne_Barrios();
                 this.dataGridViewBarrios.DataSource = barrios.RecuperaBarrios();
             }
+            else // busca por campo de busqueda si no esta tildado el [X]Todos
+            {
+                if (txtBoxNombre.Text != string.Empty)
+                {
+                    this.dataGridViewBarrios.DataSource = barrios.RecuperaBarrios(txtBoxNombre.Text);
+                    if (dataGridViewBarrios.Rows.Count == 1)
+                    {
+                        MessageBox.Show("No se encontró ningun Barrio", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese nombre a buscar.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
-
         private void dataGridViewBarrios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
