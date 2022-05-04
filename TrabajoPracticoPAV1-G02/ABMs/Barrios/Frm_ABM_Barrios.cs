@@ -30,5 +30,16 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             Frm_AltaBarrios formAltaBarrios = new Frm_AltaBarrios();
             formAltaBarrios.Show();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Frm_ModificarBarrio formModificarBarrios = new Frm_ModificarBarrio();
+            formModificarBarrios.Show();
+        }
+
+        private void grBoxFiltros_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

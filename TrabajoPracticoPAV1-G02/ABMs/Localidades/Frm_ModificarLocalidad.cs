@@ -16,5 +16,10 @@ namespace TrabajoPracticoPAV1_G02.ABMs.Localidades
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

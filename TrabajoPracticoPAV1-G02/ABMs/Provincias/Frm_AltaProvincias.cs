@@ -16,5 +16,11 @@ namespace TrabajoPracticoPAV1_G02.ABMs.Provincias
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

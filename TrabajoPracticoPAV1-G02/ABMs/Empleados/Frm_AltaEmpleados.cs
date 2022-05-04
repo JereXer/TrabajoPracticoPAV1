@@ -24,7 +24,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs.Empleados
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

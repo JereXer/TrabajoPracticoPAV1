@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPracticoPAV1_G02.ABMs.Localidades;
 
 namespace TrabajoPracticoPAV1_G02.ABMs
 {
@@ -61,7 +62,8 @@ namespace TrabajoPracticoPAV1_G02.ABMs
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            Frm_AltaLocalidades formAltaLocalidades = new Frm_AltaLocalidades();
+            formAltaLocalidades.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,7 +78,8 @@ namespace TrabajoPracticoPAV1_G02.ABMs
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            Frm_ModificarLocalidad formModificarLocalidades = new Frm_ModificarLocalidad();
+            formModificarLocalidades.Show();
         }
     }
 }

@@ -45,6 +45,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs.Provincias
             this.btnCancelar.TabIndex = 29;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnModificar
             // 
@@ -94,6 +95,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs.Provincias
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblAgregarBarrio);
             this.Name = "Frm_ModificarProvincia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Provincia";
             this.ResumeLayout(false);
             this.PerformLayout();
