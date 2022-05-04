@@ -16,5 +16,10 @@ namespace TrabajoPracticoPAV1_G02.ABMs.Barrios
         {
             InitializeComponent();
         }
+
+        private void Frm_AltaBarrios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

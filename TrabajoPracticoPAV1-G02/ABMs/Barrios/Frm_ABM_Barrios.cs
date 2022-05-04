@@ -27,7 +27,6 @@ namespace TrabajoPracticoPAV1_G02.ABMs
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Hide();
             Frm_AltaBarrios formAltaBarrios = new Frm_AltaBarrios();
             formAltaBarrios.Show();
         }

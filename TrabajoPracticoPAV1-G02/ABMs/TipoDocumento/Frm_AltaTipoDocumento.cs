@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPracticoPAV1_G02.Clases;
 
 namespace TrabajoPracticoPAV1_G02.ABMs.TipoDocumento
 {
@@ -15,6 +16,10 @@ namespace TrabajoPracticoPAV1_G02.ABMs.TipoDocumento
         public Frm_AltaTipoDocumento()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
         }
     }
 }

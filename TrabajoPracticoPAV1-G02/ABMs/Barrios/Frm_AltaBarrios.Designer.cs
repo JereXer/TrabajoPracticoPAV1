@@ -118,6 +118,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs.Barrios
             this.Name = "Frm_AltaBarrios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Barrio";
+            this.Load += new System.EventHandler(this.Frm_AltaBarrios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

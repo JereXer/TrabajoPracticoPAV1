@@ -108,6 +108,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dataGridViewProveedores
             // 
@@ -179,6 +180,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.Name = "Frm_ABM_TipoDocumentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM Tipo Documento";
+            this.Load += new System.EventHandler(this.Frm_ABM_TipoDocumentos_Load);
             this.grBoxFiltros.ResumeLayout(false);
             this.grBoxFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProveedores)).EndInit();
