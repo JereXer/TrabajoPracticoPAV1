@@ -46,10 +46,9 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtBoxApellido = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridViewProveedores = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewEmpleados = new System.Windows.Forms.DataGridView();
             this.grBoxFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProveedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -108,7 +107,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.grBoxFiltros.Controls.Add(this.lblApellido);
             this.grBoxFiltros.Controls.Add(this.txtBoxApellido);
             this.grBoxFiltros.Controls.Add(this.btnBuscar);
-            this.grBoxFiltros.Controls.Add(this.dataGridViewProveedores);
+            this.grBoxFiltros.Controls.Add(this.dataGridViewEmpleados);
             this.grBoxFiltros.Location = new System.Drawing.Point(12, 12);
             this.grBoxFiltros.Name = "grBoxFiltros";
             this.grBoxFiltros.Size = new System.Drawing.Size(688, 427);
@@ -215,22 +214,17 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dataGridViewProveedores
+            // dataGridViewEmpleados
             // 
-            this.dataGridViewProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dataGridViewProveedores.Location = new System.Drawing.Point(6, 202);
-            this.dataGridViewProveedores.Name = "dataGridViewProveedores";
-            this.dataGridViewProveedores.RowTemplate.Height = 25;
-            this.dataGridViewProveedores.Size = new System.Drawing.Size(676, 219);
-            this.dataGridViewProveedores.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.dataGridViewEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEmpleados.Location = new System.Drawing.Point(6, 202);
+            this.dataGridViewEmpleados.Name = "dataGridViewEmpleados";
+            this.dataGridViewEmpleados.RowTemplate.Height = 25;
+            this.dataGridViewEmpleados.Size = new System.Drawing.Size(676, 219);
+            this.dataGridViewEmpleados.TabIndex = 0;
             // 
             // Frm_ABM_Empleados
             // 
@@ -248,7 +242,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.Load += new System.EventHandler(this.Frm_ABM_Empleados_Load);
             this.grBoxFiltros.ResumeLayout(false);
             this.grBoxFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProveedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpleados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,8 +259,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtBoxApellido;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridViewProveedores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridView dataGridViewEmpleados;
         private System.Windows.Forms.ComboBox comboTipoDoc;
         private System.Windows.Forms.Label lblTipoDoc;
         private System.Windows.Forms.Label lblNombre;

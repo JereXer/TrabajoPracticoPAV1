@@ -111,6 +111,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             // 
             // dataGridViewProvincias
             // 
+            this.dataGridViewProvincias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewProvincias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProvincias.Location = new System.Drawing.Point(6, 173);
             this.dataGridViewProvincias.Name = "dataGridViewProvincias";

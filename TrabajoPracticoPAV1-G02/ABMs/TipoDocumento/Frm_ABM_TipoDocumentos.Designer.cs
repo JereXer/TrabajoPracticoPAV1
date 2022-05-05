@@ -36,14 +36,13 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.chkBoxTodos = new System.Windows.Forms.CheckBox();
             this.lblTipoDocumento = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridViewProveedores = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTipoDocumento = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.grBoxFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProveedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTipoDocumento)).BeginInit();
             this.SuspendLayout();
             // 
             // grBoxFiltros
@@ -53,7 +52,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.grBoxFiltros.Controls.Add(this.chkBoxTodos);
             this.grBoxFiltros.Controls.Add(this.lblTipoDocumento);
             this.grBoxFiltros.Controls.Add(this.btnBuscar);
-            this.grBoxFiltros.Controls.Add(this.dataGridViewProveedores);
+            this.grBoxFiltros.Controls.Add(this.dataGridViewTipoDocumento);
             this.grBoxFiltros.Location = new System.Drawing.Point(12, 12);
             this.grBoxFiltros.Name = "grBoxFiltros";
             this.grBoxFiltros.Size = new System.Drawing.Size(603, 408);
@@ -110,21 +109,17 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dataGridViewProveedores
+            // dataGridViewTipoDocumento
             // 
-            this.dataGridViewProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dataGridViewProveedores.Location = new System.Drawing.Point(6, 173);
-            this.dataGridViewProveedores.Name = "dataGridViewProveedores";
-            this.dataGridViewProveedores.RowTemplate.Height = 25;
-            this.dataGridViewProveedores.Size = new System.Drawing.Size(587, 219);
-            this.dataGridViewProveedores.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.dataGridViewTipoDocumento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewTipoDocumento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridViewTipoDocumento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTipoDocumento.Location = new System.Drawing.Point(6, 173);
+            this.dataGridViewTipoDocumento.Name = "dataGridViewTipoDocumento";
+            this.dataGridViewTipoDocumento.RowTemplate.Height = 25;
+            this.dataGridViewTipoDocumento.Size = new System.Drawing.Size(587, 219);
+            this.dataGridViewTipoDocumento.TabIndex = 0;
+            this.dataGridViewTipoDocumento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTipoDocumento_CellContentClick);
             // 
             // btnAgregar
             // 
@@ -185,7 +180,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.Load += new System.EventHandler(this.Frm_ABM_TipoDocumentos_Load);
             this.grBoxFiltros.ResumeLayout(false);
             this.grBoxFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProveedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTipoDocumento)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,8 +193,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
         private System.Windows.Forms.CheckBox chkBoxTodos;
         private System.Windows.Forms.Label lblTipoDocumento;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridViewProveedores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridView dataGridViewTipoDocumento;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

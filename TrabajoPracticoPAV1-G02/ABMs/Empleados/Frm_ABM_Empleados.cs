@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPracticoPAV1_G02.ABMs.Empleados;
+using TrabajoPracticoPAV1_G02.Clases;
+using TrabajoPracticoPAV1_G02.Negocio;
 
 namespace TrabajoPracticoPAV1_G02.ABMs
 {
@@ -40,6 +42,31 @@ namespace TrabajoPracticoPAV1_G02.ABMs
         {
             Frm_ModificarEmpleado formModificarEmpleados = new Frm_ModificarEmpleado();
             formModificarEmpleados.Show();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Ne_Empleado empleados = new Ne_Empleado();
+            this.dataGridViewEmpleados.DataSource = null;
+            if (chkBoxTodos.Checked == true)
+            {
+                this.dataGridViewEmpleados.DataSource = empleados.RecuperarEmpleados();
+            }
+            else // busca por campo de busqueda si no esta tildado el [X]Todos
+            {
+                if (txtBoxNombre.Text != string.Empty)
+                {
+                    this.dataGridViewEmpleados.DataSource = empleados.RecuperarEmpleados(txtBoxNombre.Text);
+                    if (dataGridViewEmpleados.Rows.Count == 1)
+                    {
+                        MessageBox.Show("No se encontró ningun Tipo de Documento.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese nombre a buscar.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
     }
 }

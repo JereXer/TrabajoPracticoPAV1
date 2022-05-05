@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPracticoPAV1_G02.ABMs.Localidades;
+using TrabajoPracticoPAV1_G02.Negocio;
 
 namespace TrabajoPracticoPAV1_G02.ABMs
 {
@@ -52,7 +53,27 @@ namespace TrabajoPracticoPAV1_G02.ABMs
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            Ne_Localidad localidades = new Ne_Localidad();
+            this.dataGridViewLocalidades.DataSource = null;
+            if (chkBoxTodos.Checked == true)
+            {
+                this.dataGridViewLocalidades.DataSource = localidades.RecuperarLocalidades();
+            }
+            else // busca por campo de busqueda si no esta tildado el [X]Todos
+            {
+                if (txtBoxNombre.Text != string.Empty)
+                {
+                    this.dataGridViewLocalidades.DataSource = localidades.RecuperarLocalidades(txtBoxNombre.Text);
+                    if (dataGridViewLocalidades.Rows.Count == 1)
+                    {
+                        MessageBox.Show("No se encontró ninguna Localidad", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese nombre a buscar.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
 
         private void dataGridViewProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)

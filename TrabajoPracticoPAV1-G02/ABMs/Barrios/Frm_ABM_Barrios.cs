@@ -50,13 +50,13 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.dataGridViewBarrios.DataSource = null;
             if (chkBoxTodos.Checked == true)
             {
-                this.dataGridViewBarrios.DataSource = barrios.RecuperaBarrios();
+                this.dataGridViewBarrios.DataSource = barrios.RecuperarBarrios();
             }
             else // busca por campo de busqueda si no esta tildado el [X]Todos
             {
                 if (txtBoxNombre.Text != string.Empty)
                 {
-                    this.dataGridViewBarrios.DataSource = barrios.RecuperaBarrios(txtBoxNombre.Text);
+                    this.dataGridViewBarrios.DataSource = barrios.RecuperarBarrios(txtBoxNombre.Text);
                     if (dataGridViewBarrios.Rows.Count == 1)
                     {
                         MessageBox.Show("No se encontró ningun Barrio", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

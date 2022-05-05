@@ -11,12 +11,12 @@ namespace TrabajoPracticoPAV1_G02.Negocio
     class Ne_Barrios
     {
         BD_acceso_a_datos _BD_barrios = new BD_acceso_a_datos();
-        public DataTable RecuperaBarrios()
+        public DataTable RecuperarBarrios()
         {
             string sql = @"SELECT * FROM [BD3K6G02_2022].[dbo].[Barrio]";
             return _BD_barrios.EjecutarSQL(sql);
         }
-        public DataTable RecuperaBarrios(string nombre)
+        public DataTable RecuperarBarrios(string nombre)
         {
             string sql = @"SELECT * FROM [BD3K6G02_2022].[dbo].[Barrio] WHERE nombre = '" + nombre + "'";
             return _BD_barrios.EjecutarSQL(sql);

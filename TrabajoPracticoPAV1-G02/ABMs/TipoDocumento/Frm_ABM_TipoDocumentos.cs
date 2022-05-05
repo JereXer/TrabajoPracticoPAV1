@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPracticoPAV1_G02.Clases;
+using TrabajoPracticoPAV1_G02.Negocio;
 
 namespace TrabajoPracticoPAV1_G02.ABMs
 {
@@ -33,15 +34,26 @@ namespace TrabajoPracticoPAV1_G02.ABMs
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (!chkBoxTodos.Checked && txtBoxNombre.Text == string.Empty)
+            Ne_TipoDocumento tiposDocumentos = new Ne_TipoDocumento();
+            this.dataGridViewTipoDocumento.DataSource = null;
+            if (chkBoxTodos.Checked == true)
             {
-                MessageBox.Show("Debe seleccionar una opcion.", "Importante!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.dataGridViewTipoDocumento.DataSource = tiposDocumentos.RecuperarTipoDocumento();
             }
-
-            if (chkBoxTodos.Checked)
+            else // busca por campo de busqueda si no esta tildado el [X]Todos
             {
-                DataTable tabla = new DataTable();
-                //Acá tiene que cargar los datos y buscar los tipos documentos
+                if (txtBoxNombre.Text != string.Empty)
+                {
+                    this.dataGridViewTipoDocumento.DataSource = tiposDocumentos.RecuperarTipoDocumento(txtBoxNombre.Text);
+                    if (dataGridViewTipoDocumento.Rows.Count == 1)
+                    {
+                        MessageBox.Show("No se encontró ningun Tipo de Documento.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese nombre a buscar.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
@@ -51,6 +63,11 @@ namespace TrabajoPracticoPAV1_G02.ABMs
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewTipoDocumento_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -157,7 +157,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             // dataGridViewBarrios
             // 
             this.dataGridViewBarrios.AllowDrop = true;
-            this.dataGridViewBarrios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridViewBarrios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBarrios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBarrios.Location = new System.Drawing.Point(10, 173);
             this.dataGridViewBarrios.Name = "dataGridViewBarrios";
