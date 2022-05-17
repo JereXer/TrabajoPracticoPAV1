@@ -58,14 +58,19 @@ namespace TrabajoPracticoPAV1_G02.ABMs
                     this.dataGridViewProvincias.DataSource = provincias.RecuperarProvincias(txtBoxNombre.Text);
                     if (dataGridViewProvincias.Rows.Count == 1)
                     {
-                        MessageBox.Show("No se encontró ningun Barrio", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("No se encontró ninguna provincia.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese nombre a buscar.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Ingrese nombre a buscar o marque la opcion de Todos.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+        }
+
+        private void grBoxFiltros_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

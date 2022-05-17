@@ -64,7 +64,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese nombre a buscar.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Ingrese nombre a buscar o marque la opcion de Todos.", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }

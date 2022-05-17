@@ -59,6 +59,7 @@ namespace TrabajoPracticoPAV1_G02.ABMs
             this.grBoxFiltros.TabIndex = 27;
             this.grBoxFiltros.TabStop = false;
             this.grBoxFiltros.Text = "Filtros";
+            this.grBoxFiltros.Enter += new System.EventHandler(this.grBoxFiltros_Enter);
             // 
             // lblNombre
             // 
